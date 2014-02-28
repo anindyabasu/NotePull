@@ -366,3 +366,17 @@ label.error {
 .bar-green {
   background-color: LimeGreen;
 }
+
+.note-item {
+  //
+  
+}
+
+.note-box {
+  padding-bottom: 10px;
+    border-bottom: 3px solid silver;
+    width: 93%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
