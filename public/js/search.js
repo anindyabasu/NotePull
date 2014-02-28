@@ -24,16 +24,16 @@ function populateSearch(results_array) {
 		document.getElementById('noResults').style.display = 'none';
 		var num = results_array.length;
 		var i;
-		var ul = '<ul>';
+		var ul = '<ul class="search-list">';
 		for (i = 0; i < num; ++i) {
 			var line = results_array[i];
 			//var li = '<li>' + line.note + '</li>';
 			if ((i % 2) == 0) {
-				var li = '<li class="result-odd">' + '<a href="/edit/' + line.id.folder 
+				var li = '<li class="result-odd result">' + '<a href="/edit/' + line.id.folder 
 							+ '/' + line.id.note + '">'+ line.note + '</a></li>';
 			}
 			else {
-				var li = '<li class="result-even">' + '<a href="/edit/' + line.id.folder 
+				var li = '<li class="result-even result">' + '<a href="/edit/' + line.id.folder 
 							+ '/' + line.id.note + '">'+ line.note + '</a></li>';
 			}
 			ul += li;

@@ -237,20 +237,30 @@ div[data-tag="4"] {
     border-color: rgba(0,0,0,.2);
 }
 
-#page{
+/*#page{
   margin-top: 70px;
-}
+}*/
 
 #results {
   margin-top: 15px;
 }
 
 .result-odd {
-  color: #474747;
+  color: #fff;
 }
 
 .result-even {
-  color: #39B54A;
+  color: #fff;
+}
+
+.result {
+  display:inline-block;
+  border-bottom: 3px solid silver;
+  padding: 10px 0;
+}
+
+.search-list {
+  padding: 5%;
 }
 
 #searchResults a {

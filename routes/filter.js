@@ -48,7 +48,6 @@ function search(tag_string) {
 			}
 		}
 	}
-	console.log(found_lines);
 	return found_lines;
 }
 
