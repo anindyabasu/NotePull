@@ -35,8 +35,8 @@
                         <div class="form-group">
                           <input id="folder_name" name="folder_name" placeholder="Folder Name" type="text" size="35" class="form-control" style="border-radius:0;font-size:large;" value="{{folder_name}}"/>
                         </div>
-                        <span style="color: silver;">updated {{last_updated}}</span>
-                        <div class="note-box"><a href="/new/{{id}}" style="color:#fff;" class="foldertitle">+    New Note</a> <div class="btn-group sortControl" id="sortNotesControl" style="float:right;">
+                        <span id="folder-date" style="color: silver;">updated {{last_updated}}</span>
+                        <div class="note-box" style="margin-top:10px;"><a href="/new/{{id}}" style="color:#fff;" class="foldertitle">+    New Note</a> <div class="btn-group sortControl" id="sortNotesControl" style="float:right;">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span id="sortNotesButton">Sort By</span><span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" role="menu">
@@ -59,7 +59,7 @@
                         {{/each}}
                         </ul>
                         
-                        <!--<input type="submit" id="submitBtn" class="btn btn-default submitButton" value="Update folder"></input>-->
+                        <input type="submit" id="submitBtn" style="visibility:hidden" class="btn btn-default submitButton" value="Update folder"></input>
                     </form>
 <!--
                     <form id="deleteForm" action="/delete/{{id}}" method="POST">
@@ -84,5 +84,11 @@
         <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="/js/bootstrap.min.js"></script>
         <script src="/js/note.js"></script>
+        <script>
+        $('#folder_name').keypress(function(e) {
+        if (e.which == 13) {
+            $('#folderForm').submit();
+        }
+    });</script>
     </body>
 </html>

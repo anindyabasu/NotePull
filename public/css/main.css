@@ -402,3 +402,26 @@ label.error {
 .sortControl .dropdown-menu>li>a {
   color: #fff;
 }
+
+#searchControl {
+  display: block;
+}
+#searchControl button{
+  width: 100%;
+}
+
+#results {
+  margin-top: 50px;
+}
+#searchControl .dropdown-menu {
+  top: 40px;
+  left: 23%;
+}
+
+#folder_name {
+  margin: 10px;
+  font-size: large;
+  padding: 10px;
+  border-radius: 0;
+  width: 95%;
+}

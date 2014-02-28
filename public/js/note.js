@@ -31,7 +31,7 @@ function selectColor(e) {
 	$(e).css('border-width',"3px");
 
 	//$('#myModal1').modal('hide');
-	highlightOn = !highlightOn;
+	highlightOn = true;//!highlightOn;
 	$("#colorsButton").popover('hide');
 
 }

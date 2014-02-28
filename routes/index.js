@@ -109,18 +109,20 @@ exports.newFolder = function(req, res){
 
 exports.addFolder = function(req, res){
 	var folder_name = req.body.folder_name;
-	var date = current_date();
-	var folder_json = {
-		'folder_name': folder_name,
-		'last_updated': date,
-		'folder': []
-	};
+	if (folder_name != "") { // a bit of validation
+		var date = current_date();
+		var folder_json = {
+			'folder_name': folder_name,
+			'last_updated': date,
+			'folder': []
+		};
 
-	//var newfolder_id = folderJson['folders'].length;
-	folderJson['folders'].push(folder_json);
+		//var newfolder_id = folderJson['folders'].length;
+		folderJson['folders'].push(folder_json);
+	}
 
 	//res.redirect('/folder/' + newfolder_id);
-	res.redirect('/home');
+	res.redirect('/new');
 };
 
 exports.submitEditFolder = function(req, res){

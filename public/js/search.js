@@ -5,6 +5,8 @@ $(document).ready(function() {
 	initializePage();
 });
 
+var color_hex = '#fff';
+
 /*
  * Function that is called when the document is ready.
  */
@@ -41,13 +43,32 @@ function populateSearch(results_array) {
 
 		ul += '</ul>';
 		wrapper_div.html(ul);
+
+		$('#results  ul').css('border-left', '3px solid ' + color_hex);
 	}
 }
 
 function getResults(e) {
 	e.preventDefault();
 	var search_string = $(this).data('color');
+	assignColorHex(search_string);
+	var search_color = 'Search ' + $(this).text();
+	$('#searchButton').text(search_color);
 	$.get("/search/"+ search_string, populateSearch);
+}
+
+function assignColorHex(color_number_string) {
+	console.log(color_number_string);
+	if (color_number_string == "1")
+		color_hex = 'DarkOrange';
+	else if (color_number_string == "2")
+		color_hex = 'Crimson';
+	else if (color_number_string == "3")
+		color_hex = 'Teal';
+	else if (color_number_string == "4")
+		color_hex = 'LimeGreen';
+	else 
+		color_hex = '#fff';
 }
 
 function doFoldersSort(e) {

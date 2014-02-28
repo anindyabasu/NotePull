@@ -241,10 +241,6 @@ div[data-tag="4"] {
   margin-top: 70px;
 }*/
 
-#results {
-  margin-top: 15px;
-}
-
 .result-odd {
   color: #fff;
 }
@@ -260,7 +256,7 @@ div[data-tag="4"] {
 }
 
 .search-list {
-  padding: 5%;
+  padding: 0 5%;
 }
 
 #searchResults a {
@@ -362,4 +358,15 @@ div[data-tag="4"] {
  text-align: right;
     width: 4%;
     border: 2px solid red;
+}
+
+#folder-date {
+  text-transform: uppercase;
+  padding-left: 7px;
+  font-size: smaller;
+  letter-spacing: 1.2px;
+}
+
+#folderForm .form-group {
+  margin-bottom: 5px;
 }
