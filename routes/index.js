@@ -97,10 +97,11 @@ exports.generateRead = function(req, res){
 
 function current_date() {
             var d = new Date();
-            //return d.toDateString();
+            return d.toDateString();
+            /*
             return (d.getMonth()+1) + "/" +
                         d.getDate() + "/" +
-                        d.getFullYear();
+                        d.getFullYear();*/
 }
 
 exports.newFolder = function(req, res){

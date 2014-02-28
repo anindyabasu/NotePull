@@ -27,7 +27,7 @@ textarea {
 
 #done-icon {
 	float: right;
-	color: #39b54a;
+	color: #ed1c47;
 }
 /* For help popover */
 .popover-example .popover {
@@ -369,4 +369,11 @@ div[data-tag="4"] {
 
 #folderForm .form-group {
   margin-bottom: 5px;
+}
+
+#date {
+    text-transform: uppercase;
+  padding-left: 7px;
+  font-size: smaller;
+  letter-spacing: 1.2px;
 }
