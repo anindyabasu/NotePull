@@ -356,6 +356,7 @@ div[data-tag="4"] {
  background-color: transparent;
     color: white;
     margin-bottom: 3px;
+    border-radius: 0;
 }
 .x {
  text-align: right;

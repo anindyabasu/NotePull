@@ -380,3 +380,10 @@ label.error {
     vertical-align: top;
     text-align: left;
 }
+
+.sortControl .btn-default {
+ background-color: transparent;
+    color: white;
+    margin-bottom: 3px;
+    border-radius: 0;
+}
