@@ -1,4 +1,5 @@
 var folderJson = require('../folders.json');
+var handlebars = require('express3-handlebars');
 
 exports.searchLines = function(req, res) {
 	var search_string = req.params.color;
@@ -51,20 +52,88 @@ function search(tag_string) {
 	return found_lines;
 }
 
-function foldersAlphaAsc(a,b) {
-	return (a.folder_name).toLowerCase() - (b.folder_name).toLowerCase();
+exports.sortFolders = function(req, res) {
+		console.log ('waeeeeeeeeeeeeeeeeee');
+
+	var folders = folderJson['folders'];
+	var sortType = req.params.sortType;
+
+	if (sortType == "alpha") {
+		console.log('aniyooooo');
+		folders.sort(foldersNameAsc);
+	}
+	else if (sortType == "alphadesc") {
+		console.log('ahhhhhhhhhhhhhh');
+		folders.sort(foldersNameDesc);
+	}
+	else if (sortType == "latest") {
+		folders.sort(foldersDateLatest);
+	}
+	else if (sortType == "oldest"){
+		folders.sort(foldersDateOldest);
+	}
+	res.redirect('/home');
+};
+
+exports.sortNotes = function(req, res) {
+	var sortType = req.params.sortType;
+	var folder_string = req.params.folder;
+	var folder_id = parseInt(folder_string, 10); //check Nan
+	var folder = folderJson['folders'][folder_id].folder;
+
+	if (sortType == "alpha") {
+		folder.sort(notesNameAsc);
+	}
+	else if (sortType == "alphadesc") {
+		folder.sort(notesNameDesc);
+	}
+	else if (sortType == "latest") {
+		folder.sort(notesDateLatest);
+	}
+	else if (sortType == "oldest"){
+		folder.sort(notesDateOldest);
+	}
+
+	res.redirect('/edit/' + folder_id);
+};
+
+function foldersNameAsc(a,b) {
+	return ((a.folder_name).toLowerCase()).localeCompare((b.folder_name).toLowerCase());
 }
 
-function foldersAlphaDesc(a,b) {
-	return (b.folder_name).toLowerCase() - (a.folder_name).toLowerCase();
+function foldersNameDesc(a,b) {
+	return ((b.folder_name).toLowerCase()).localeCompare((a.folder_name).toLowerCase());
+	//return (b.folder_name).toLowerCase() - (a.folder_name).toLowerCase();
 }
 
 function foldersDateLatest(a,b) {
-	var aDate = new Date(a), bDate = new Date(b);
+	var aDate = new Date(a.last_updated), bDate = new Date(b.last_updated);
 	return bDate.getTime() - aDate.getTime();
 }
 
 function foldersDateOldest(a,b) {
-	var aDate = new Date(a), bDate = new Date(b);
+	var aDate = new Date(a.last_updated), bDate = new Date(b.last_updated);
+	return aDate.getTime() - bDate.getTime();
+}
+
+
+
+
+
+function notesNameAsc(a,b) {
+	return ((a.title).toLowerCase()).localeCompare((b.title).toLowerCase());
+}
+
+function notesNameDesc(a,b) {
+	return ((b.title).toLowerCase()).localeCompare((a.title).toLowerCase());
+}
+
+function notesDateLatest(a,b) {
+	var aDate = new Date(a.date), bDate = new Date(b.date);
+	return bDate.getTime() - aDate.getTime();
+}
+
+function notesDateOldest(a,b) {
+	var aDate = new Date(a.date), bDate = new Date(b.date);
 	return aDate.getTime() - bDate.getTime();
 }

@@ -9,7 +9,9 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$('.dropdown-menu a').click(getResults);
+	$('#searchControl .dropdown-menu a').click(getResults);
+	//$('#sortFolderDiv .dropdown-menu a').click(doFoldersSort);
+	//$('#sortNotesDiv .dropdown-menu a').click(doNotesSort);
 }
 
 function populateSearch(results_array) {
@@ -46,4 +48,14 @@ function getResults(e) {
 	e.preventDefault();
 	var search_string = $(this).data('color');
 	$.get("/search/"+ search_string, populateSearch);
+}
+
+function doFoldersSort(e) {
+	e.preventDefault();
+	var sortType = $(this).data('order');
+}
+
+function doNotesSort(e) {
+	e.preventDefault();
+	var sortType = $(this).data('order');
 }
