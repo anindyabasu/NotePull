@@ -26,17 +26,25 @@
             <!-- SIDEBAR -->
             <div class="row">
                 <a href="/landing.html">
-                        <a href="/new">
-                            <img src="img/notepulllogosettings.png" width=310px/>
-                        </a>
+                    <img src="img/notepulllogosettings.png" width=310px/>
+                </a>
                 <li class="active">
                     <form class="form-signin settings" role="form">
                         <div class="hidden" id="uh"><input type="name" class="form-control" placeholder="Name" required="" id="nameField"></div>
                         <input type="email" class="form-control settings" placeholder="a@a.a" required="" id="emailField">
                         <br>
-                        <input type="password" class="form-control" placeholder="Password" required="" id="passwordField"><br>
-                        <input type="password" class="form-control" placeholder="Retype password" required="" id="passwordField"><br>
-                        <a href="landing.html" class="btn btn-lg btn-primary btn-block" id="loginButton" type="submit" style="font-family:'Roboto'; color:white;">Save</a>
+                        <input type="password" class="form-control" placeholder="Password" required value="" id="pwdField_1"><br>
+                        <input type="password" class="form-control" placeholder="Retype password" required="" id="pwdField_2"><br>
+                        <input type="submit" class="btn btn-lg btn-primary btn-block" id="saveButton" value="Save" onclick="check();"/>
+                        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="settingsModal">
+                          <div class="modal-dialog modal-sm">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    Your new settings have been saved.
+                                </div>
+                            </div>
+                          </div>
+                        </div>
                     </form>
                 </li>
             </div>
@@ -51,5 +59,6 @@
         <script src="js/bootstrap-formhelpers.min.js"></script>
 
         <script src="js/main.js"></script>
+
     </body>
 </html>
