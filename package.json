@@ -1,17 +1,16 @@
 {
-  "name": "cs147-lab-1",
-  "description": "Serving static content via html files",
+  "name": "Notepull",
+  "description": "Pull what matters, a note taking app",
   "version": "0.0.1",
-  "author": "CS147 Staff <cs147@cs.stanford.edu>",
+  "author": "Anindya Basu, Helena Qin, Yalin Zhang",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StanfordHCI/cs147"
+    "url": "https://github.com/anindyabasu/notepull"
   },
   "license": "MIT",
   "main": "server.js",
   "dependencies": {
-    "express": "~3.4.8",
-    "logfmt": "~0.20.0"
+    "express": "~3.4.8"
   },
   "engines": {
     "node": "0.10.x"

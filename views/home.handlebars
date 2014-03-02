@@ -24,8 +24,10 @@
             <div class="row">
             <!-- this is the other column in the code -->
             <div class="col-xs-12 col-sm-9 col-md-10 main">
-                <img src="/img/notepulllogofolders.png" width=310px />
-                <div class="btn-group sortControl" id="sortFoldersControl">
+                <a href="/landing.html"><img src="/img/notepulllogofolders.png" style="width:310px" /></a>
+                <div class="newfolder1"><a href="/new">
+                        <span class="newfolder">+    NEW FOLDER</span>
+                        </a><div class="btn-group sortControl" id="sortFoldersControl" style="float:right;">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span id="sortFoldersButton">Sort By</span><span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" role="menu">
@@ -35,61 +37,21 @@
                             <li><a href="/sort/oldest" data-order="oldest">Date: Oldest</a></li>
                           </ul>
                     </div> 
-                <br><br>
-                <div class="newfolder1"><a href="/new">
-                            <span class="newfolder">+    NEW FOLDER</span>
-                        </a></div>
+                </div>
                         
                         
-                        {{#each home.folders}}
+                {{#each home.folders}}
                 <div class="folder">
                     <div class="folder-content">
                     <a href="/edit/{{@index}}" class="foldertitle"><span> {{this.folder_name}}</span><br/><span class="folder-date">{{this.last_updated}}</span></a>
+                    </div>
+                    <div class="highlights">
+                        <div class="bar-red"></div>
+                        <div class="bar-yellow"></div>
+                        <div class="bar-green"></div>
+                        <div class="bar-blue"></div>
+                    </div>
                 </div>
-                <div class="highlights">
-                    <div class="bar-red"></div>
-                    <div class="bar-yellow"></div>
-                    <div class="bar-green"></div>
-                    <div class="bar-blue"></div>
-                </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <!-- Modal HTML -->
-                        <!-- THIS MODAL IS TO OPEN AN ALREADY EXISTING FOLDER -->
-                        <div id="{{@index}}" class="modal fade">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title">{{this.folder_name}}</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        {{setIndex @index}}
-                                        {{#each folder}}
-                                        <div id="notepageRead">
-                                            <a class="note_file" href="/edit/{{../index}}/{{@index}}"><h3>{{title}}</h3></a>
-                                            <br>
-                                        </div>
-                                        {{/each}}
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="/new/{{@index}}" class="btn btn-success">Create</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                 {{/each}}
 
             <!-- END COPY PASTE HERE FOR SIDE BAR CODE -->

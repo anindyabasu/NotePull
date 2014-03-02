@@ -27,7 +27,7 @@ textarea {
 
 #done-icon {
 	float: right;
-	color: #39b54a;
+	color: #ed1c47;
 }
 /* For help popover */
 .popover-example .popover {
@@ -237,20 +237,26 @@ div[data-tag="4"] {
     border-color: rgba(0,0,0,.2);
 }
 
-#page, #folderForm {
+/*#page{
   margin-top: 70px;
-}
-
-#results {
-  margin-top: 15px;
-}
+}*/
 
 .result-odd {
-  color: #474747;
+  color: #fff;
 }
 
 .result-even {
-  color: #39B54A;
+  color: #fff;
+}
+
+.result {
+  display:inline-block;
+  border-bottom: 3px solid silver;
+  padding: 10px 0;
+}
+
+.search-list {
+  padding: 0 5%;
 }
 
 #searchResults a {
@@ -269,6 +275,7 @@ div[data-tag="4"] {
 
 .deleteNote {
   padding:0;
+  color: #ed1c47;
 }
 
 .highlight-toggle {
@@ -345,9 +352,28 @@ div[data-tag="4"] {
  background-color: transparent;
     color: white;
     margin-bottom: 3px;
+    border-radius: 0;
 }
 .x {
  text-align: right;
     width: 4%;
     border: 2px solid red;
+}
+
+#folder-date {
+  text-transform: uppercase;
+  padding-left: 7px;
+  font-size: smaller;
+  letter-spacing: 1.2px;
+}
+
+#folderForm .form-group {
+  margin-bottom: 5px;
+}
+
+#date {
+    text-transform: uppercase;
+  padding-left: 7px;
+  font-size: smaller;
+  letter-spacing: 1.2px;
 }

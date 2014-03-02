@@ -57,7 +57,7 @@ handlebars.registerHelper('setIndex', function(value){
 app.get('/checkLogin', index.checkLogin);
 
 app.post('/readNote', index.generateRead); //submitting
-app.post('/delete/:folder/:note', index.deleteNote); //submitting // to delete later
+app.get('/delete/:folder/:note', index.deleteNote); //submitting // to delete later
 app.get('/delete/:folder/:note/:note_num', index.deleteNoteLine); //submitting // to delete later
 
 

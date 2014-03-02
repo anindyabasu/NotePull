@@ -229,8 +229,7 @@ html, body, .container-fluid {
 }
 .main {
 		height: 100%;
-		margin-top: 30px;
-		/*display: inline-block;*/
+		/*margin-top: 30px;*/
 }
 .folder {
 		padding: 2%;
@@ -365,4 +364,64 @@ label.error {
 
 .bar-green {
   background-color: LimeGreen;
+}
+
+.note-item {
+  //
+  
+}
+
+.note-box {
+  padding-bottom: 10px;
+    border-bottom: 3px solid silver;
+    width: 93%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.sortControl .btn-default,
+.sortControl .btn-default:hover,
+.sortControl .btn-default:focus,
+.sortControl .btn-default:active,
+.sortControl .btn-default.active,
+.sortControl.open .dropdown-toggle.btn-default {
+ background-color: transparent;
+    color: white;
+    margin-bottom: 3px;
+    border-radius: 0;
+}
+
+.sortControl .dropdown-menu {
+  border: 1px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  background-color: #161616;
+}
+
+.sortControl .dropdown-menu>li>a {
+  color: #fff;
+}
+
+#searchControl {
+  display: block;
+}
+#searchControl button{
+  width: 100%;
+}
+
+#results {
+  margin-top: 50px;
+}
+#searchControl .dropdown-menu {
+  top: 40px;
+  left: 23%;
+}
+
+#folder_name {
+  margin: 10px;
+  font-size: large;
+  padding: 10px;
+  border-radius: 0;
+  width: 95%;
 }
