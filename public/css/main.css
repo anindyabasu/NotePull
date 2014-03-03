@@ -64,6 +64,9 @@
 #loginButton {
     background-color: transparent;
 }
+#saveButton {
+  background-color: transparent;
+}
 .settings {
     text-align: left;
 }
