@@ -84,6 +84,7 @@ app.post('/move/:folder/:note/:tofolder', index.moveNote);
 app.get('/folder/:folder', index.viewFolder);	// read
 
 app.get('/home', index.viewFolders);			// read all folders
+app.get('/homeTour', index.viewFoldersTour);
 app.get('/search/:color', filter.searchLines);
 app.get('/search', filter.showSearch);
 

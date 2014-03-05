@@ -28,7 +28,7 @@ function validateLogin(json) {
 
 	if (json.isUser)
 	{
-		window.location.href = "home.html";
+		window.location.href = "landing_tour.html";
 	}
 	else {
 		// add error styles!

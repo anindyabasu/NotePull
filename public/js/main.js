@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	
+	initializePage();
 	$(".popover-top").popover('show');
 	/*
 	 *  Simple image gallery. Uses default settings
@@ -171,7 +172,13 @@ $(document).ready(function() {
 			}
 		});
 	});
+
 });
+
+
+function initializePage() {
+	$('#tourModal').modal('show');
+}
 
 function check() {
 

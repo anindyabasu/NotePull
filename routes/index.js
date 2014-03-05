@@ -123,7 +123,7 @@ exports.addFolder = function(req, res){
 	}
 
 	//res.redirect('/folder/' + newfolder_id);
-	res.redirect('/new');
+	res.redirect('/home');
 };
 
 exports.submitEditFolder = function(req, res){
@@ -320,5 +320,14 @@ exports.viewFolders = function(req, res){
 	var folders = folderJson;
 //console.log(folders);
 	res.render('home', { 'home': folders, helpers: {setIndex: function(value){
+                this.index = Number(value);}}});
+};
+
+exports.viewFoldersTour = function(req, res){
+	// folder json!
+
+	var folders = folderJson;
+//console.log(folders);
+	res.render('homeTour', { 'homeTour': folders, helpers: {setIndex: function(value){
                 this.index = Number(value);}}});
 };

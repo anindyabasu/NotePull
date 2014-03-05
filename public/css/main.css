@@ -67,6 +67,18 @@
 #saveButton {
   background-color: transparent;
 }
+#startBtn {
+  background-color: #00CCFF;
+}
+#noBtn {
+  background-color: transparent;
+}
+.popover-top {
+  font-family: Roboto;
+}
+.panel-collapse {
+  background-color: transparent;
+}
 .settings {
     text-align: left;
 }
