@@ -100,6 +100,7 @@ function initializePage() {
 		}
 	});
 	$('.note').on('keypress', function(e) {
+		if($(this)[0].nodeName.toLowerCase() != "textarea")
 		noteKeyPress(e);
 	});
 	// consider for notes too! but need to attach handler when creating
