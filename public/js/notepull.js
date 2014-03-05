@@ -33,7 +33,7 @@ function validateLogin(json) {
 	else {
 		// add error styles!
 		if (!tryAgain1)
-		$('#emailField').before('<h5 style="color:red">Please try again</h5>');
+		$('#emailField').before('<h5 style="color:#ed1c47">Please try again. (beta hint: user: a@a.a, password: a)</h5>');
 		tryAgain1 = true;
 	}
 }
