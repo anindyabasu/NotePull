@@ -10,7 +10,8 @@
 				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
 				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"},
 				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class"}
-			]
+			],
+			"listFormat":true
 		}, 
 		{
 			"date": "Mon Feb 17 2014",
@@ -19,7 +20,8 @@
 				{ "tag": "0", "note": "Hallelujah"},
 				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
 				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"}
-			]
+			],
+			"listFormat":true
 		}
 		]
 	},
@@ -34,7 +36,8 @@
 				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
 				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"},
 				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class"}
-			]
+			],
+			"listFormat":true
 		},
 		{
 			"date": "Tue Feb 18 2014",
@@ -44,7 +47,8 @@
 				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
 				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"},
 				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class"}
-			]
+			],
+			"listFormat":true
 		}
 		]
 	}

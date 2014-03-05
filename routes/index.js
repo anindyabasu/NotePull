@@ -151,7 +151,21 @@ exports.editFolder = function(req, res){
 exports.newNote = function(req, res){
 	var folder_string = req.params.folder;
 	var folder_id = parseInt(folder_string, 10); //check Nan
-	res.render('new', {'id': folder_id});
+
+	//res.render('new', {'id': folder_id});
+	res.render('chooseFormat', {'id':folder_id});
+};
+
+exports.newTextNote = function(req, res) {
+	var folder_string = req.params.folder;
+	var folder_id = parseInt(folder_string, 10); //check Nan
+	res.render('new', {'id': folder_id, 'listFormat':false});
+};
+
+exports.newListNote = function(req, res) {
+	var folder_string = req.params.folder;
+	var folder_id = parseInt(folder_string, 10); //check Nan
+	res.render('new', {'id': folder_id, 'listFormat':true});
 };
 
 exports.moveNote = function(req, res) {

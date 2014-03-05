@@ -56,21 +56,14 @@
 
                     <div id="notepage">
                         
-                        <input id="title" placeholder="Title" type="text" size="35" style="border-radius:0;"autofocus/>
-                        <div id="date-div">
-                            <span id="date"><span>
+                        <div id="toolbar">
+                        <a href="/edit/{{id}}" id="backButton"><i class="fa fa-chevron-left fa-2x" style="color:#fff;float:left;padding-left: 15px;"></i></a>
                         </div>
-                        <div>
-                            <!--<textarea rows="20" class="form-control"></textarea>-->
-                            <ul id="notelist">
-                            </ul>
-                            {{#if listFormat}}
-                            <div id="newnote"class="edit-note" data-tag="0" style="text-align:center;font-weight:bold">+</div>
-                            {{else}}
-                            <textarea class="note" rows="20" class="form-control" style="padding:7px" data-tag="0"></textarea>
-                            {{/if}}
-                        </div>
-                        <form id="submitForm" action="/add/{{id}}" method="POST"></form>
+                        <div id="notepage">
+                            <h3>Choose a format:</h3>
+                            <a href="/newList/{{id}}">List</a><br/>
+                            <a href="/newText/{{id}}">Text</a><br/>
+                        </div> 
                     </div>  
                     
                 </div>
