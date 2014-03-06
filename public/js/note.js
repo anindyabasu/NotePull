@@ -189,6 +189,11 @@ function submitNewNote(e) {
 		"listFormat" : isList};
 		//console.log(note_wrapper);
 
+	if (isList)
+		ga("send", "event", "typeOfNote", "click", "list");
+	else
+		ga("send", "event", "typeOfNote", "click", "text");
+
 
 	var form = $('#submitForm');
 	var inputdata = $('<input name="noteField" id="noteField" hidden></input>');
