@@ -2,11 +2,7 @@
 .login {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #0f0f0f;
-	background-image: url("../img/background1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #000;
 }
 .uh{
     overflow: hidden;
@@ -225,16 +221,17 @@ body {
 	min-height: 100%;
 }
 .nav {
-    background-image: url("../img/background1.jpg");
+    /*background-image: url("../img/background1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 
 /* Sidebar navigation */
 html, body, .container-fluid {
     height: 100%;
-    background-image: url("../img/background1.jpg");
+    /*background-image: url("../img/background1.jpg");*/
+    background-color: #000;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
