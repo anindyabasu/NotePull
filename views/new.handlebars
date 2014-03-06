@@ -113,7 +113,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   $(document).ready(function() {
     $('#submitNote').click(function() {
-        ga("send", "event", "typeOfNote", "click");
+        if ({{listFormat}})
+        ga("send", "event", "typeOfNote", "click", "list");
+        else
+            ga("send", "event", "typeOfNote", "click", "text");
     });
 
   });
