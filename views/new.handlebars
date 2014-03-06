@@ -110,10 +110,15 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   ga('create', 'UA-48688137-1', 'notepull.herokuapp.com');
   ga('send', 'pageview');
-
+function tryThis() {
+    if (window.location.href.indexOf('List') != -1) {        
+        ga("send", "event", "typeOfNote", "click", "list");
+    }
+    else
+        ga("send", "event", "typeOfNote", "click", "text");
+    }
   $(document).ready(function() {
-
-
+    $('#submitNote').click(tryThis);
   });
 
 </script>
