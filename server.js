@@ -67,6 +67,7 @@ app.post('/edit/:folder/:note', index.submitEditNote);	// post from edit
 														// post(a) del
 
 app.get('/new/:folder', index.newNote); 		// add note to folder
+app.get('/newTour/:folder', index.newNoteTour);     // add note to folder
 app.get('/read/:folder/:note', index.readNote); // read
 app.get('/edit/:folder/:note', index.editNote); // edit 
 app.get('/edit_tour/:folder/:note', index.editNoteTour);

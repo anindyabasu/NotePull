@@ -63,6 +63,7 @@ $(document).ready(function() {
 		$("#colorsButton").popover('show');
 	});*/
 	$(".popover-top").popover('show');
+	//$(".popover").popover('show');
 });
 
 $(document).click(function(e) {

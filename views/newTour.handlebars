@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>notePULL</title>
+    <meta name="COGS120" content="Sign Up">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <!--<link rel="stylesheet" href="/css/main.css">-->
+    
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/css/note.css">
+    <!-- Bootstrap Form Helpers -->
+    <link href="/css/bootstrap-form-helpers.min.css" rel="stylesheet" media="screen">
+    <!-- Add Responsiveness
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">-->
+    <!-- Social Media Buttons -->
+    <link href="/css/social-buttons-3.css" rel="stylesheet">
+    <!-- Extra Icons -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+    <body>
+        <script>
+        function resize_input(textbox) {
+            //var maxrows=4;
+            var txt=textbox.value;
+            var arraytxt=txt.split('\n');
+            var rows=arraytxt.length;
+            //if (rows < maxrows)
+            //    textbox.rows=maxrows;
+            //else
+                textbox.rows=rows; // not perfect, good for now
+        }
+        </script>
+        <div class="container">
+            <!-- COPY AND PASTE THIS FOR THE SIDE BAR CODE -->
+             <div class="row row-offcanvas row-offcanvas-left">
+                <!-- this is the other column in the code -->
+                <div class="col-xs-12 col-sm-9 main" id="column2">
+                   <!-- <p class="pull-left visible-xs">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
+                    </p>-->
+                    <div id="toolbar">
+                        <a href="/edit/{{id}}" id="backButton"><i class="fa fa-chevron-left fa-2x" style="color:white;float:left; padding-left: 15px;"></i></a>
+                        <a href="/read.html" id="submitNote"><span class="glyphicon glyphicon-ok" id="done-icon"></span></a>
+                        <a href="#" id="colorsButton"><div class="popover-top" data-toggle="popover" data-placement="bottom" data-content="Click me to highlight!" id="highlightPop" style="font-family:'Roboto'"></div><span class="glyphicon glyphicon-tag" id="colorsButtonIcon"></span></a>
+                    </div>
+
+                    <div id="notepage">
+                        
+                        <input id="title" placeholder="Title" type="text" size="35" style="border-radius:0;"autofocus/>
+                        <div id="date-div">
+                            <span id="date"><span>
+                        </div>
+                        <div>
+                            <ul id="notelist">
+                            </ul>
+                            <div id="newnote"class="edit-note" data-tag="0" style="text-align:center;font-weight:bold">+</div>
+                        </div>
+                        <form id="submitForm" action="/add/{{id}}" method="POST"></form><div class="popover-top" data-toggle="popover" data-placement="bottom" data-content="Click me to add bullets" style="font-family:'Roboto'"></div>
+                    </div>  
+                    
+                </div>
+            </div>
+        
+            <!-- END COPY PASTE HERE FOR SIDE BAR CODE -->
+        </div>
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="/js/jquery-1.9.0.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+        <script src="/js/note.js"></script>
+    </body>
+</html>

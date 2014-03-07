@@ -177,6 +177,14 @@ exports.newNote = function(req, res){
 	res.render('new', {'id': folder_id});
 	//res.render('chooseFormat', {'id':folder_id});
 };
+
+exports.newNoteTour = function(req, res){
+	var folder_string = req.params.folder;
+	var folder_id = parseInt(folder_string, 10); //check Nan
+
+	res.render('newTour', {'id': folder_id});
+	//res.render('chooseFormat', {'id':folder_id});
+};
 /*
 exports.newTextNote = function(req, res) {
 	var folder_string = req.params.folder;
