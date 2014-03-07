@@ -81,8 +81,8 @@ app.post('/edit_tour/:folder', index.submitEditFolderTour);
 app.post('/delete/:folder', index.deleteFolder);
 
 // alternatives
-app.get('/newList/:folder', index.newListNote);
-app.get('/newText/:folder', index.newTextNote);
+//app.get('/newList/:folder', index.newListNote);
+//app.get('/newText/:folder', index.newTextNote);
 
 app.post('/move/:folder/:note/:tofolder', index.moveNote);
 

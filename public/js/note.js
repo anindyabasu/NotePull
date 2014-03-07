@@ -166,13 +166,7 @@ function submitNewNote(e) {
 	var note_arr = [];
 	var isList = true;
 	for (var i = 0; i < numNotes; i++) {
-		var note;
-		if (($(notes[i])[0].nodeName).toLowerCase() == "textarea") {
-			isList = false;
-			note = $(notes[i]).val();
-		}
-		else 
-			note = $(notes[i]).text();
+		var note = $(notes[i]).text();
 		console.log($(notes[i]).html());
 		var tag = $(notes[i]).data('tag');
 		var note_json = {"tag": tag, "note": note}; // tag is for highlight
@@ -185,8 +179,7 @@ function submitNewNote(e) {
 	var note_wrapper = {
 		"date" : date,
 		"title" : title,
-		"notes" : note_arr,
-		"listFormat" : isList};
+		"notes" : note_arr};
 		//console.log(note_wrapper);
 
 
