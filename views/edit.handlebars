@@ -43,7 +43,6 @@
                             <span id="date-edit">{{date}}<span>
                         </div>
                             <!--<textarea rows="20" class="form-control"></textarea>-->
-                        {{#if listFormat}}
                         <ul id="notelist">
                             {{#each notes}}
                                 <li>
@@ -53,11 +52,6 @@
                             {{/each}}
                         </ul>
                         <div id="newnote"class="edit-note" data-tag="0" style="text-align:center;font-weight:bold">+</div>
-                        {{else}}
-                            {{#each notes}}
-                            <textarea class="note" rows="20" class="form-control" style="padding:7px" data-tag="0">{{note}}</textarea>
-                            {{/each}}
-                        {{/if}}
                         
                         </div>
                         <form id="submitForm" action="/edit/{{f_id}}/{{n_id}}" method="POST"></form>

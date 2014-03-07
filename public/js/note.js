@@ -179,7 +179,7 @@ function submitNewNote(e) {
 	var note_wrapper = {
 		"date" : date,
 		"title" : title,
-		"notes" : note_arr;
+		"notes" : note_arr};
 		//console.log(note_wrapper);
 
 
