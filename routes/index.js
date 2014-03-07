@@ -137,6 +137,17 @@ exports.submitEditFolder = function(req, res){
 	res.redirect('/edit/' + folder_id);
 };
 
+exports.submitEditFolderTour = function(req, res){
+	var folder_name = req.body.folder_name;
+	var folder_string = req.params.folder;
+	var folder_id = parseInt(folder_string, 10); //check Nan
+
+	folderJson['folders'][folder_id].folder_name = folder_name;
+
+	//res.redirect('/folder/' + folder_id);
+	res.redirect('/edit_tour/' + folder_id);
+};
+
 exports.editFolder = function(req, res){
 	var folder_string = req.params.folder;
 	var folder_id = parseInt(folder_string, 10); //check Nan
@@ -146,6 +157,17 @@ exports.editFolder = function(req, res){
 	folder.id = folder_id;
 
 	res.render('editFolder', folder);
+};
+
+exports.editFolderTour = function(req, res){
+	var folder_string = req.params.folder;
+	var folder_id = parseInt(folder_string, 10); //check Nan
+
+	var folders = folderJson['folders'];
+	var folder = folders[folder_id];
+	folder.id = folder_id;
+
+	res.render('editFolderTour', folder);
 };
 
 exports.newNote = function(req, res){
@@ -261,6 +283,35 @@ folders[0].folder.push(newnote);
 	note.f_id = folder_id;
 	note.n_id = note_id;
 	res.render('edit', note);
+};
+
+exports.editNoteTour = function(req, res){
+	var note_string   = req.params.note;
+	var folder_string = req.params.folder;
+
+	var note_id = parseInt(note_string, 10);// check if isNan(note_id) => error, 404?
+	var folder_id = parseInt(folder_string, 10);
+	//console.log ((typeof note_id) + " " + (typeof folder_id)); //number
+
+	var folders = folderJson['folders'];
+	var note = folders[folder_id].folder[note_id];
+	/* ER MA GOD IT WORKS HALLEFKINLUJAHHHH
+	var newnote = {
+			"date": "02/14/2014",
+			"title": "COGS 120 Week 8 new",
+			"notes": [
+				{ "tag": "0", "note": "Hallelujah"},
+				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
+				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"}
+			]
+		};
+folders[0].folder.push(newnote);
+	console.log('----');
+	*/
+	//var json = noteJson; // error-format?	
+	note.f_id = folder_id;
+	note.n_id = note_id;
+	res.render('edit_tour', note);
 };
 
 exports.deleteNote = function(req, res){
