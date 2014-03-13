@@ -67,19 +67,23 @@ app.post('/edit/:folder/:note', index.submitEditNote);	// post from edit
 														// post(a) del
 
 app.get('/new/:folder', index.newNote); 		// add note to folder
+app.get('/newTour/:folder', index.newNoteTour);     // add note to folder
 app.get('/read/:folder/:note', index.readNote); // read
 app.get('/edit/:folder/:note', index.editNote); // edit 
+app.get('/edit_tour/:folder/:note', index.editNoteTour);
 												// delete
 
 app.get('/new', index.newFolder); // warning: no notes! error proof it
 app.get('/edit/:folder', index.editFolder); // warning: no notes! error proof it
+app.get('/edit_tour/:folder', index.editFolderTour); // warning: no notes! error proof it
 app.post('/add', index.addFolder);
 app.post('/edit/:folder', index.submitEditFolder);
+app.post('/edit_tour/:folder', index.submitEditFolderTour);
 app.post('/delete/:folder', index.deleteFolder);
 
 // alternatives
-app.get('/newList/:folder', index.newListNote);
-app.get('/newText/:folder', index.newTextNote);
+//app.get('/newList/:folder', index.newListNote);
+//app.get('/newText/:folder', index.newTextNote);
 
 app.post('/move/:folder/:note/:tofolder', index.moveNote);
 

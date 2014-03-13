@@ -40,6 +40,9 @@ function selectColor(e) {
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+
+
 	$(".btn").click(function(){
 	                $("#myModal").modal('show');
 	            });
@@ -58,13 +61,33 @@ $(document).ready(function() {
 		placement: 'bottom',
 		content: colorSelects
 	});
-	/*
-	$('#colorsButton').click(function() {
-		$("#colorsButton").popover('show');
-	});*/
-	$(".popover-top").popover('show');
-});
 
+	$(".popover-top").popover('show');
+	$("#titleTip").tooltip('show');
+	$("#title").click(function(){
+		$("#titleTip").tooltip('hide');
+	});
+
+	$("#highlightTip").tooltip('show');
+	$("#colorsButton").click(function(){
+		$("#highlightTip").tooltip('hide');
+	});
+
+	$("#bulletTip").tooltip('show');
+	$("#newnote").click(function(){
+		$("#bulletTip").tooltip('hide');
+	});
+
+	$("#done-icon").tooltip('show');
+	$("#submitNote").click(function(){
+		$("#done-icon").tooltip('hide');
+	});
+	//var elem = '<button id="close-popover" data-toggle="click" class="btn btn-small btn-primary pull-right" onclick="$(&quot;#highlightPop&quot;).popover(&quot;hide&quot;);">close</button>';
+	//$("#highlightPop").popover({animation:true, content:elem, html:true});
+	//$("#submitForm").popover({animation:true, content:elem, html:true});
+	
+
+});
 $(document).click(function(e) {
 $('#colorsButton').each(function() {
 		//$("#colorsButton").popover('show');
@@ -165,17 +188,16 @@ function submitNewNote(e) {
 	var numNotes =  notes.length;
 	var note_arr = [];
 	var isList = true;
+
+	var tags = [false, false, false, false];
 	for (var i = 0; i < numNotes; i++) {
-		var note;
-		if (($(notes[i])[0].nodeName).toLowerCase() == "textarea") {
-			isList = false;
-			note = $(notes[i]).val();
-		}
-		else 
-			note = $(notes[i]).text();
+		var note = $(notes[i]).text();
 		console.log($(notes[i]).html());
 		var tag = $(notes[i]).data('tag');
 		var note_json = {"tag": tag, "note": note}; // tag is for highlight
+		if (tag > 0) {
+			tags[tag-1] = true;
+		}
 		note_arr.push(note_json);
 	}
 	//var date = $('#date').text(); // date\n
@@ -186,9 +208,8 @@ function submitNewNote(e) {
 		"date" : date,
 		"title" : title,
 		"notes" : note_arr,
-		"listFormat" : isList};
+		"tags" : tags};
 		//console.log(note_wrapper);
-
 
 
 	var form = $('#submitForm');
