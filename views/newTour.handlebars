@@ -44,14 +44,20 @@
                         <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
                     </p>-->
                     <div id="toolbar">
-                        <a href="/edit/{{id}}" id="backButton"><i class="fa fa-chevron-left fa-2x" style="color:white;float:left; padding-left: 15px;"></i></a>
-                        <a href="/read.html" id="submitNote"><span class="glyphicon glyphicon-ok" id="done-icon"></span></a>
-                        <a href="#" id="colorsButton"><div class="popover-top" data-toggle="popover" data-placement="bottom" data-content="Click me to highlight!" id="highlightPop" style="font-family:'Roboto'"></div><span class="glyphicon glyphicon-tag" id="colorsButtonIcon"></span></a>
+                        <a href="/edit/{{id}}" id="backButton">
+                        <i class="fa fa-chevron-left fa-2x" style="color:white;float:left; padding-left: 15px;"></i></a>
+                        <a href="/read.html" id="submitNote"><span class="glyphicon glyphicon-ok" id="done-icon" data-placement="bottom" title="Click me to save!"></span>
+                        </a>
+                        <a href="#" id="colorsButton"><span class="glyphicon glyphicon-tag" id="colorsButtonIcon"></span>
+                            <div id="highlightTip" data-placement="bottom" title="Click me to highlight!"></div>
+                        </a>
+                    
                     </div>
 
                     <div id="notepage">
                         
                         <input id="title" placeholder="Title" type="text" size="35" style="border-radius:0;"autofocus/>
+                        <div id="titleTip" data-placement="bottom" title="Add a title!"></div>
                         <div id="date-div">
                             <span id="date"><span>
                         </div>
@@ -60,7 +66,9 @@
                             </ul>
                             <div id="newnote"class="edit-note" data-tag="0" style="text-align:center;font-weight:bold">+</div>
                         </div>
-                        <form id="submitForm" action="/add/{{id}}" method="POST"></form><div class="popover-top" data-toggle="popover" data-placement="bottom" data-content="Click me to add bullets" style="font-family:'Roboto'"></div>
+                        <form id="submitForm" action="/add/{{id}}" method="POST">
+                        <div id="bulletTip" data-placement="bottom" title="Click me to add a bullet!"></div>
+                        </form>
                     </div>  
                     
                 </div>

@@ -40,6 +40,9 @@ function selectColor(e) {
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+
+
 	$(".btn").click(function(){
 	                $("#myModal").modal('show');
 	            });
@@ -58,14 +61,33 @@ $(document).ready(function() {
 		placement: 'bottom',
 		content: colorSelects
 	});
-	/*
-	$('#colorsButton').click(function() {
-		$("#colorsButton").popover('show');
-	});*/
-	$(".popover-top").popover('show');
-	//$(".popover").popover('show');
-});
 
+	$(".popover-top").popover('show');
+	$("#titleTip").tooltip('show');
+	$("#title").click(function(){
+		$("#titleTip").tooltip('hide');
+	});
+
+	$("#highlightTip").tooltip('show');
+	$("#colorsButton").click(function(){
+		$("#highlightTip").tooltip('hide');
+	});
+
+	$("#bulletTip").tooltip('show');
+	$("#newnote").click(function(){
+		$("#bulletTip").tooltip('hide');
+	});
+
+	$("#done-icon").tooltip('show');
+	$("#submitNote").click(function(){
+		$("#done-icon").tooltip('hide');
+	});
+	//var elem = '<button id="close-popover" data-toggle="click" class="btn btn-small btn-primary pull-right" onclick="$(&quot;#highlightPop&quot;).popover(&quot;hide&quot;);">close</button>';
+	//$("#highlightPop").popover({animation:true, content:elem, html:true});
+	//$("#submitForm").popover({animation:true, content:elem, html:true});
+	
+
+});
 $(document).click(function(e) {
 $('#colorsButton').each(function() {
 		//$("#colorsButton").popover('show');
