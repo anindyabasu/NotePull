@@ -227,6 +227,13 @@ exports.addNote = function(req, res){
 	res.redirect('/edit/' + folder_id + '/' + newnote_id);
 };
 
+function updateFolderColors(tags, folder_id) {
+	folderJson['folders'][folder_id].tag1 = tags[0];
+	folderJson['folders'][folder_id].tag2 = tags[1];
+	folderJson['folders'][folder_id].tag3 = tags[2];
+	folderJson['folders'][folder_id].tag4 = tags[3];
+}
+
 exports.submitEditNote = function(req, res){
 	var note_string   = req.params.note;
 	var folder_string = req.params.folder;
@@ -240,6 +247,8 @@ exports.submitEditNote = function(req, res){
 	folders[folder_id].folder[note_id] = json;
 	json.date = current_date();
 	updateFolderDate(json.date, folder_id);
+	updateFolderColors(json.tags, folder_id);
+	console.log(folders[folder_id]);
 
 	//console.log(json);
 	//console.log(folders[folder_id]);

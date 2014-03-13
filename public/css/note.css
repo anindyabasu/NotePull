@@ -102,7 +102,7 @@ footer {
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
+    left: -60%; /* 6 columns */
   }
 
   .row-offcanvas-right.active {
@@ -110,13 +110,13 @@ footer {
   }
 
   .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
+    left: 60%; /* 6 columns */
   }
 
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 50%; /* 6 columns */
+    width: 60%; /* 6 columns */
 
     /* own */
     background-color: #474747;
@@ -377,4 +377,22 @@ div[data-tag="4"] {
   padding-left: 7px;
   font-size: smaller;
   letter-spacing: 1.2px;
+}
+
+#submitNoteFixed {
+  background-color: #000;
+  position: absolute;
+  display: block;
+  right: 20px;
+  top: 20px;
+  z-index: 100;
+}
+
+#colorsButton {
+  background-color: #000;
+  position: absolute;
+  display: block;
+  right: 60px;
+  top: 20px;
+  z-index: 100;
 }

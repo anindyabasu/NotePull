@@ -166,11 +166,16 @@ function submitNewNote(e) {
 	var numNotes =  notes.length;
 	var note_arr = [];
 	var isList = true;
+
+	var tags = [false, false, false, false];
 	for (var i = 0; i < numNotes; i++) {
 		var note = $(notes[i]).text();
 		console.log($(notes[i]).html());
 		var tag = $(notes[i]).data('tag');
 		var note_json = {"tag": tag, "note": note}; // tag is for highlight
+		if (tag > 0) {
+			tags[tag-1] = true;
+		}
 		note_arr.push(note_json);
 	}
 	//var date = $('#date').text(); // date\n
@@ -180,7 +185,8 @@ function submitNewNote(e) {
 	var note_wrapper = {
 		"date" : date,
 		"title" : title,
-		"notes" : note_arr};
+		"notes" : note_arr,
+		"tags" : tags};
 		//console.log(note_wrapper);
 
 

@@ -1,6 +1,10 @@
 {"folders" : [
 	{"folder_name": "COGS",
 	"last_updated" : "Tue Feb 18 2014",
+	"tag1" : true,
+	"tag2" : false,
+	"tag3" : false,
+	"tag4" : true,
 	"folder" : [
 		{
 			"date": "Tue Feb 18 2014",
@@ -25,6 +29,10 @@
 	},
 	{"folder_name": "CSE 170",
 	"last_updated" : "Tue Feb 18 2014",
+	"tag1" : false,
+	"tag2" : false,
+	"tag3" : false,
+	"tag4" : true,
 	"folder" : [
 		{
 			"date": "Tue Feb 18 2014",

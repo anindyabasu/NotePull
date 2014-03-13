@@ -7,7 +7,8 @@
     <meta name="COGS120" content="Sign Up">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <!--<link rel="stylesheet" href="/css/note.css">-->
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- Bootstrap Form Helpers -->
@@ -21,11 +22,22 @@
     <body>
         <div class="container-fluid">
             <!-- COPY AND PASTE THIS FOR THE SIDE BAR CODE -->
-            <div class="row">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="#"><i class="fa fa-plus fa-2x"></i> NEW</a></li>
+                        <li><a href="home"><i class="fa fa-folder-open-o fa-2x"></i> FOLDERS</a></li>
+                        <li><a href="settings.html"><i class="fa fa-cog fa-2x"></i> SETTINGS</a></li>
+                        <li><a href="help.html"><i class="glyphicon glyphicon-question-sign iconav"></i> HELP</a></li>
+                        <li><a href="index.html"><i class="glyphicon glyphicon-log-out iconav"></i> LOGOUT</a></li>
+                    </ul>
+                </div>
             <!-- this is the other column in the code -->
-            <div class="col-xs-12 col-sm-9 col-md-10 main">
-                <a href="/landing.html"><img src="/img/notepulllogofolders.png" style="width:200px" /></a>
-                <div class="newfolder1"><a href="/new">
+            <div class="col-xs-12 col-sm-9  main" id="column2">
+                <p class="pull-left visible-xs">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
+                    </p>
+                <!--<div class="newfolder1"><a href="/new">
                         <span class="newfolder">+    NEW FOLDER</span>
                         </a><div class="btn-group sortControl" id="sortFoldersControl" style="float:right;">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span id="sortFoldersButton">Sort By</span><span class="caret"></span>
@@ -37,22 +49,44 @@
                             <li><a href="/sort/oldest" data-order="oldest">Date: Oldest</a></li>
                           </ul>
                     </div> 
+                </div>-->
+                        
+                <div class="folder" style="height:60px;">
+                    <div style="border:1px solid #333;height:100%;background:transparent;width:70%;padding:5%;display:table-cell;"><input style="border:transparent;height:100%;background:transparent;" placeholder="search notes"></input></div>
+                    <div style="display:table-cell;border:1px solid #333;height:100%;background:transparent;width:20%;padding:5%;height:100%;"><a>+</a></div>
+                    <div style="display:table-cell;border:1px solid #333;height:100%;background:transparent;width:20%;padding:5%;height:100%;"><a>></a></div>
+
                 </div>
-                        
-                        
                 {{#each home.folders}}
                 <div class="folder">
                     <div class="folder-content">
-                    <a href="/edit/{{@index}}" class="foldertitle"><span> {{this.folder_name}}</span><br/><span class="folder-date">{{this.last_updated}}</span></a>
+                     <div style="margin-top:12px;margin-bottom:-3px"><a href="/edit/{{@index}}" class="foldertitle">{{this.folder_name}}</a></div><span class="folder-date">{{this.last_updated}}</span>
                     </div>
                     <div class="highlights">
-                        <div class="bar-red"></div>
-                        <div class="bar-yellow"></div>
-                        <div class="bar-green"></div>
-                        <div class="bar-blue"></div>
+                        {{#if this.tag1}}
+                            <div class="bar-red"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
+                        {{#if this.tag2}}
+                            <div class="bar-yellow"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
+                        {{#if this.tag3}}
+                            <div class="bar-green"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
+                        {{#if this.tag4}}
+                            <div class="bar-blue"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
                     </div>
                 </div>
                 {{/each}}
+
 
             <!-- END COPY PASTE HERE FOR SIDE BAR CODE -->
             </div>
