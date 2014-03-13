@@ -1,10 +1,10 @@
 textarea {
-	padding: 0;
-	width: 100%;
+  padding: 0;
+  width: 100%;
 }
 
 #column2 {
-	height: 100%;
+  height: 100%;
 }
 
 #title {
@@ -18,16 +18,16 @@ textarea {
 }
 
 #prev-icon {
-	float: left;
+  float: left;
 }
 
 #next-icon {
-	float: right;
+  float: right;
 }
 
 #done-icon {
-	float: right;
-	color: #ed1c47;
+  float: right;
+  color: #ed1c47;
 }
 /* For help popover */
 .popover-example .popover {
@@ -42,10 +42,10 @@ textarea {
 .toolbar-links:visited { color: #fff; }
 
 span.glyphicon {
-	font-size: 20px;
-	color: #fff;
-	margin-left: 20px;
-	margin-right: 20px;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /***************************************/
@@ -68,8 +68,8 @@ footer {
   padding: 30px 0;
 }*/
 .row, .container, #sidebar {
-	height: 100%;
-	min-height: 100%;
+  height: 100%;
+  min-height: 100%;
 }
 
 /*
@@ -102,7 +102,7 @@ footer {
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -60%; /* 6 columns */
+    left: -50%; /* 6 columns */
   }
 
   .row-offcanvas-right.active {
@@ -110,13 +110,13 @@ footer {
   }
 
   .row-offcanvas-left.active {
-    left: 60%; /* 6 columns */
+    left: 50%; /* 6 columns */
   }
 
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 60%; /* 6 columns */
+    width: 50%; /* 6 columns */
 
     /* own */
     background-color: #474747;
@@ -145,7 +145,7 @@ footer {
 
 #notepage {
   height: 100%;
-	margin-top:60px;
+  margin-top:60px;
   text-align: left;
 }
 
@@ -162,16 +162,16 @@ footer {
   background-color: #474747;
   padding-top: 13px;
   margin-left: -15px;
-	/*padding-bottom: 40px;*/
-	text-align: center;
+  /*padding-bottom: 40px;*/
+  text-align: center;
   /*opacity: 0.5;*/
 }
 /*
 @media all and (max-height: 500px) {
-	#toolbar {
-		position: fixed;
-		top: 0px;
-	}
+  #toolbar {
+    position: fixed;
+    top: 0px;
+  }
 }*/
 
 div.edit-note {
@@ -377,22 +377,4 @@ div[data-tag="4"] {
   padding-left: 7px;
   font-size: smaller;
   letter-spacing: 1.2px;
-}
-
-#submitNoteFixed {
-  background-color: #000;
-  position: absolute;
-  display: block;
-  right: 20px;
-  top: 20px;
-  z-index: 100;
-}
-
-#colorsButton {
-  background-color: #000;
-  position: absolute;
-  display: block;
-  right: 60px;
-  top: 20px;
-  z-index: 100;
 }
