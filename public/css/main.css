@@ -416,6 +416,7 @@ label.error {
 }
 
 #searchControl {
+  margin-top: 30px;
   display: block;
 }
 #searchControl button{
@@ -423,7 +424,7 @@ label.error {
 }
 
 #results {
-  margin-top: 50px;
+  margin-top: 80px;
 }
 #searchControl .dropdown-menu {
   top: 40px;

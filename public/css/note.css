@@ -239,7 +239,7 @@ div[data-tag="3"] {
 
 .result {
   display:inline-block;
-  border-bottom: 3px solid silver;
+  border-bottom: 1px solid #333;
   padding: 10px 0;
 }
 

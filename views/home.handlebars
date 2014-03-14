@@ -19,17 +19,17 @@
 </head>
 
     <body>
-        <div id="toolbar" style="z-index:100;background-color:#000;height:40px;">
+        <!--<div id="toolbar" style="z-index:100;background-color:#000;height:40px;">
                         <a href="/home" id="backButton" class="left_title"><i class="fa fa-chevron-left" style="font-size:25px;color:white;float:left; padding-left:40px;"></i></a>
                         <span style="color:#fff" class="page_title">Home</span>
-                    </div>
-        <div class="container-fluid" style="margin-top:60px;">
+                    </div>-->
+        <div class="container-fluid">
             <!-- COPY AND PASTE THIS FOR THE SIDE BAR CODE -->
             <div class="row">
             <!-- this is the other column in the code -->
             <div class="col-xs-12 col-sm-9 col-md-10 main">
-                <!--<a href="/landing.html"><img src="/img/notepulllogofolders.png" style="width:200px" /></a>-->
-                <!--<div class="newfolder1"><a href="/new">
+                <a href="/landing.html"><img src="/img/notepulllogofolders.png" style="width:200px" /></a>
+                <div class="newfolder1"><a href="/new">
                         <span class="newfolder">+    NEW FOLDER</span>
                         </a><div class="btn-group sortControl" id="sortFoldersControl" style="float:right;">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span id="sortFoldersButton">Sort By</span><span class="caret"></span>
@@ -41,16 +41,8 @@
                             <li><a href="/sort/oldest" data-order="oldest">Date: Oldest</a></li>
                           </ul>
                     </div> 
-                </div>-->
-
-                <div class="folder" style="height:60px;">
-                    <div style="display:table-cell;border:1px solid #333;height:100%;background:transparent;width:50%;padding:5%;height:100%;"><a>+</a></div>
-                    <div style="display:table-cell;border:1px solid #333;height:100%;background:transparent;width:50%;padding:5%;height:100%;"><a>></a></div>
-
                 </div>
 
-                        
-                        
                 {{#each home.folders}}
                 <div class="folder">
                     <div class="folder-content">
