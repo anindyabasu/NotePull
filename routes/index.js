@@ -223,14 +223,20 @@ exports.addNote = function(req, res){
 	var newnote_id = folders[folder_id].folder.length;
 	folders[folder_id].folder.push(json);
 	updateFolderDate(json.date, folder_id);
+	console.log(folderJson['folders'][folder_id]);
+	updateFolderColors(json.tags, folder_id);
 
 	res.redirect('/edit/' + folder_id + '/' + newnote_id);
 };
 
 function updateFolderColors(tags, folder_id) {
+	if (tags[0] == true)
 	folderJson['folders'][folder_id].tag1 = tags[0];
+	if (tags[1] == true)
 	folderJson['folders'][folder_id].tag2 = tags[1];
+	if (tags[2] == true)
 	folderJson['folders'][folder_id].tag3 = tags[2];
+	if (tags[3] == true)
 	folderJson['folders'][folder_id].tag4 = tags[3];
 }
 
@@ -248,13 +254,7 @@ exports.submitEditNote = function(req, res){
 	json.date = current_date();
 	updateFolderDate(json.date, folder_id);
 	updateFolderColors(json.tags, folder_id);
-	console.log(folders[folder_id]);
 
-	//console.log(json);
-	//console.log(folders[folder_id]);
-	//console.log('/read/' + folder_id + '/' + note_id);
-
-	//res.redirect('/read/' + folder_id + '/' + note_id);
 	res.redirect('/edit/' + folder_id + '/' + note_id);
 };
 
@@ -283,20 +283,7 @@ exports.editNote = function(req, res){
 
 	var folders = folderJson['folders'];
 	var note = folders[folder_id].folder[note_id];
-	/* ER MA GOD IT WORKS HALLEFKINLUJAHHHH
-	var newnote = {
-			"date": "02/14/2014",
-			"title": "COGS 120 Week 8 new",
-			"notes": [
-				{ "tag": "0", "note": "Hallelujah"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
-				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"}
-			]
-		};
-folders[0].folder.push(newnote);
-	console.log('----');
-	*/
-	//var json = noteJson; // error-format?	
+
 	note.f_id = folder_id;
 	note.n_id = note_id;
 	res.render('edit', note);
@@ -312,19 +299,7 @@ exports.editNoteTour = function(req, res){
 
 	var folders = folderJson['folders'];
 	var note = folders[folder_id].folder[note_id];
-	/* ER MA GOD IT WORKS HALLEFKINLUJAHHHH
-	var newnote = {
-			"date": "02/14/2014",
-			"title": "COGS 120 Week 8 new",
-			"notes": [
-				{ "tag": "0", "note": "Hallelujah"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
-				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"}
-			]
-		};
-folders[0].folder.push(newnote);
-	console.log('----');
-	*/
+
 	//var json = noteJson; // error-format?	
 	note.f_id = folder_id;
 	note.n_id = note_id;

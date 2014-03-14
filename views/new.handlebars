@@ -35,20 +35,16 @@
                 textbox.rows=rows; // not perfect, good for now
         }
         </script>
+        <div id="toolbar" style="z-index:100;">
+                        <a href="/edit/{{id}}" id="backButton"><i class="fa fa-chevron-left fa-2x" style="color:white;float:left; padding-left: 15px;"></i></a>
+                        <a href="/read.html" id="submitNote"><span class="glyphicon glyphicon-ok" id="done-icon"></span></a>
+                        <a href="#" id="colorsButton"><span class="glyphicon glyphicon-tag" id="colorsButtonIcon"></span></a>
+                    </div>
         <div class="container">
             <!-- COPY AND PASTE THIS FOR THE SIDE BAR CODE -->
              <div class="row row-offcanvas row-offcanvas-left">
                 <!-- this is the other column in the code -->
                 <div class="col-xs-12 main" id="column2" style="background-color:#fff;">
-                   <!-- <p class="pull-left visible-xs">
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
-                    </p>-->
-                    <div id="toolbar">
-                        <a href="/edit/{{id}}" id="backButton"><i class="fa fa-chevron-left fa-2x" style="color:white;float:left; padding-left: 15px;"></i></a>
-                        <a href="/read.html" id="submitNote"><span class="glyphicon glyphicon-ok" id="done-icon"></span></a>
-                        <a href="#" id="colorsButton"><span class="glyphicon glyphicon-tag" id="colorsButtonIcon"></span></a>
-                    </div>
-
                     <div id="notepage">
                         
                         <input id="title" placeholder="Title" type="text" size="35" style="border-radius:0;"autofocus/>

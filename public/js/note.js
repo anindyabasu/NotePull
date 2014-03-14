@@ -1,5 +1,6 @@
 'use strict';
 var savedColor = "none";
+var savedColorValue = "transparent";
 var savedColorTag = "0";
 var highlightOn = false;
 var lastColored = null;
@@ -13,11 +14,26 @@ function current_date() {
 }
 
 function colorToTag () {
-	if (savedColor == "yellow")     return "1";
-	else if (savedColor == "red")   return "2";
-	else if (savedColor == "blue")  return "3";
-	else if (savedColor == "green") return "4";
-	else							return "0";
+	if (savedColor == "red") {
+		savedColorValue = "Tomato";
+		return "1";
+	}
+	else if (savedColor == "yellow") {  
+		savedColorValue = "DarkOrange";
+		return "2";
+	}
+	else if (savedColor == "green") { 
+		savedColorValue = "LimeGreen";
+		return "3";
+	}
+	else if (savedColor == "blue") { 
+		savedColorValue = "Teal";
+		return "4";
+	}
+	else {
+		savedColorValue = "transparent";
+		return "0";
+	}
 }
 
 function selectColor(e) {
@@ -40,9 +56,6 @@ function selectColor(e) {
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-
-
-
 	$(".btn").click(function(){
 	                $("#myModal").modal('show');
 	            });
@@ -50,10 +63,10 @@ $(document).ready(function() {
 	/*$("#colorsButton").click(function(){
 	                $("#myModal1").modal('show');
 	            });*/
-	var colorSelects = '<a href="#" class="foo" id="red" style="background-color:red" onClick="selectColor(this)"></a>'+
-                                        '<a href="#" class="foo" id="green" style="background-color:green" onClick="selectColor(this)"></a>'+
-                                        '<a href="#" class="foo" id="blue" style="background-color:blue" onClick="selectColor(this)"></a>'+
-                                        '<a href="#" class="foo" id="yellow" style="background-color:yellow" onClick="selectColor(this)"></a>'+
+	var colorSelects = '<a href="#" class="foo" id="red" style="background-color:Tomato" onClick="selectColor(this)"></a>'+
+                                        '<a href="#" class="foo" id="green" style="background-color:LimeGreen" onClick="selectColor(this)"></a>'+
+                                        '<a href="#" class="foo" id="blue" style="background-color:Teal" onClick="selectColor(this)"></a>'+
+                                        '<a href="#" class="foo" id="yellow" style="background-color:DarkOrange" onClick="selectColor(this)"></a>'+
                                         '<a href="#" class="foo" id="none" style="background-color:transparent" onClick="selectColor(this)"></a>';
 	$("#colorsButton").popover({
 		animation: true,
@@ -61,33 +74,14 @@ $(document).ready(function() {
 		placement: 'bottom',
 		content: colorSelects
 	});
-
+	/*
+	$('#colorsButton').click(function() {
+		$("#colorsButton").popover('show');
+	});*/
 	$(".popover-top").popover('show');
-	$("#titleTip").tooltip('show');
-	$("#title").click(function(){
-		$("#titleTip").tooltip('hide');
-	});
-
-	$("#highlightTip").tooltip('show');
-	$("#colorsButton").click(function(){
-		$("#highlightTip").tooltip('hide');
-	});
-
-	$("#bulletTip").tooltip('show');
-	$("#newnote").click(function(){
-		$("#bulletTip").tooltip('hide');
-	});
-
-	$("#done-icon").tooltip('show');
-	$("#submitNote").click(function(){
-		$("#done-icon").tooltip('hide');
-	});
-	//var elem = '<button id="close-popover" data-toggle="click" class="btn btn-small btn-primary pull-right" onclick="$(&quot;#highlightPop&quot;).popover(&quot;hide&quot;);">close</button>';
-	//$("#highlightPop").popover({animation:true, content:elem, html:true});
-	//$("#submitForm").popover({animation:true, content:elem, html:true});
-	
-
+	//$(".popover").popover('show');
 });
+
 $(document).click(function(e) {
 $('#colorsButton').each(function() {
 		//$("#colorsButton").popover('show');
@@ -137,7 +131,7 @@ function initializePage() {
 		$('#colorsButtonIcon').css('color', '#fff');
 		if (highlightOn) {
 			if (savedColor != "none")
-				$('#colorsButtonIcon').css('color', savedColor);
+				$('#colorsButtonIcon').css('color', savedColorValue);
 		}
 	});
 	$('#colorsButton').on('hide.bs.popover', function () {
@@ -145,7 +139,7 @@ function initializePage() {
 		$('#colorsButtonIcon').css('color', '#fff');
 		if (highlightOn) {
 			if (savedColor != "none")
-				$('#colorsButtonIcon').css('color', savedColor);
+				$('#colorsButtonIcon').css('color', savedColorValue);
 		}
 	});
 	$('.collapse').collapse();
@@ -195,8 +189,9 @@ function submitNewNote(e) {
 		console.log($(notes[i]).html());
 		var tag = $(notes[i]).data('tag');
 		var note_json = {"tag": tag, "note": note}; // tag is for highlight
-		if (tag > 0) {
-			tags[tag-1] = true;
+		var tagInt = parseInt(tag, 10);
+		if (tagInt > 0) {
+			tags[tagInt-1] = true;
 		}
 		note_arr.push(note_json);
 	}
@@ -219,6 +214,7 @@ function submitNewNote(e) {
 	form.submit();
 	
 }
+
 
 $(document).ready(function () {
   $('[data-toggle=offcanvas]').click(function () {

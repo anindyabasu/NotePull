@@ -23,26 +23,23 @@
 </head>
 
     <body>
+        <div id="toolbar" style="z-index:100;">
+            <a href="/edit/{{f_id}}" id="backButton"><i class="fa fa-chevron-left fa-2x" style="color:#fff;float:left;padding-left: 15px;"></i></a>
+            <a href="/read.html" id="submitNote"><span class="glyphicon glyphicon-ok" id="done-icon"></span></a>
+            <a href="#" id="colorsButton"><span class="glyphicon glyphicon-tag" id="colorsButtonIcon"></span></a>
+        </div>
         <div class="container" style="background-color:#fff">
             <!-- COPY AND PASTE THIS FOR THE SIDE BAR CODE -->
             <div class="row row-offcanvas row-offcanvas-left">
                 <!-- this is the other column in the code -->
                 <div class="col-xs-12  main" id="column2">
-                   <!-- <p class="pull-left visible-xs">
-                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Menu</button>
-                    </p>-->
-                    <div id="toolbar">
-                        <a href="/edit/{{f_id}}" id="backButton"><i class="fa fa-chevron-left fa-2x" style="color:#fff;float:left;padding-left: 15px;"></i></a>
-                        <a href="#" id="colorsButton"><span class="glyphicon glyphicon-tag" id="colorsButtonIcon"></span></a>
-                        <a href="/read.html" id="submitNote"><span class="glyphicon glyphicon-ok" id="done-icon"></span></a>
-                    </div>
                     <div id="notepage">
                         <input id="title" placeholder="Title" type="text" size="35" value="{{title}}"/>
                         <div>
                         <div id="date-div">
                             <span id="date-edit">{{date}}<span>
                         </div>
-                            <!--<textarea rows="20" class="form-control"></textarea>-->
+
                         <ul id="notelist">
                             {{#each notes}}
                                 <li>
@@ -62,47 +59,10 @@
                     
                 </div>
             
-        <!-- testing toolbar right now
-            <div class="mastfoot">
-                    <div class="inner">
-                        <p style="color: black; text-align: center;">Created by Anindya Basu, Helena Qin, Yalin Zhang using <a href="http://getbootstrap.com/">Bootstrap</a>.</p>
-                    </div>
-                </div>
-            -->
             </div>
         
             <!-- END COPY PASTE HERE FOR SIDE BAR CODE -->
         </div>
-        <div id="myModal1" class="modal fade">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title">Select a color for highlighting bullets.</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                    <div class="col-sm-5">
-                                        <div class="btn-group highlight-toggle" data-toggle="buttons">
-                                          <label class="btn btn-primary" style="width:40%" id="hi-on">
-                                            <input type="radio" name="highlight-option" id="hon"> on
-                                          </label>
-                                          <label class="btn btn-primary active" style="width:40%" id="hi-off">
-                                            <input type="radio" name="highlight-option" id="hoff"> off
-                                          </label>
-                                        </div>
-                                        <a href="#" class="foo" id="red" style="background-color:red" onClick="selectColor(this)"></a>
-                                        <a href="#" class="foo" id="green" style="background-color:green" onClick="selectColor(this)"></a>
-                                        <a href="#" class="foo" id="blue" style="background-color:blue" onClick="selectColor(this)"></a>
-                                        <a href="#" class="foo" id="yellow" style="background-color:yellow" onClick="selectColor(this)"></a>
-                                        <a href="#" class="foo" id="none" style="background-color:transparent" onClick="selectColor(this)"></a>
-                                    </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Save and Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
         <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="/js/jquery-1.9.0.min.js"></script>
         <script type="text/javascript" src="/js/jquery-1.10.1.min.js"></script>
