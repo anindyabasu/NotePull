@@ -133,6 +133,8 @@ footer {
 #notepage {
   height: 100%;
   text-align: left;
+    margin-top:55px;
+
 }
 
 #notepageRead {

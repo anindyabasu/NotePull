@@ -183,7 +183,7 @@ function addNote(e) {
 
 	var newnote = $('<li><div contenteditable="true" class="note edit-note" data-tag="0" onclick="hello(this);" onkeypress="noteKeyPress(event)"></div>'+
 	//	'<a href="/delete/'+curr_note_folder+'/'+curr_note+'/'+line_num+'" class="btn-xs deleteNote"><i class="fa fa-times"></i></a></li>');
-		'<a href="/home" onclick="delete_new_line(event, this);" class="btn-xs deleteNote"><i class="fa fa-times"></i></a></li>');
+		'<a href="/home" onclick="delete_new_line(event, this);" class="btn-xs deleteNote"><i class="fa fa-times" style="margin-left:5px;"></i></a></li>');
 
 	//var newnote = $('<li><div contenteditable="true" class="note edit-note" data-tag="0" onclick="hello(this);" onkeypress="noteKeyPress(event)"></div></li>');
 	notelist.append(newnote);
