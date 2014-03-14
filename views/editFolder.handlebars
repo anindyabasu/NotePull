@@ -36,7 +36,7 @@
                           <input id="folder_name" name="folder_name" placeholder="Folder Name" type="text" size="35" class="form-control" style="border-radius:0;font-size:large;" value="{{folder_name}}"/>
                         </div>
                         <span id="folder-date" style="color: silver;">updated {{last_updated}}</span>
-                        <div class="note-box" style="margin-top:10px;"><a href="/new/{{id}}" style="color:#fff;" class="foldertitle">+    New Note</a> <div class="btn-group sortControl" id="sortNotesControl" style="float:right;">
+                        <div class="note-box " id = "newnote-box" style="margin-top:10px;"><a href="/new/{{id}}" style="color:#fff;" class="foldertitle" id="newnoteLink">+    New Note</a> <div class="btn-group sortControl" id="sortNotesControl" style="float:right;">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span id="sortNotesButton">Sort By</span><span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" role="menu">

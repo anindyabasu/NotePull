@@ -27,7 +27,7 @@
             <!-- COPY AND PASTE THIS FOR THE SIDE BAR CODE -->
              <div class="row row-offcanvas row-offcanvas-left">
                 <!-- this is the other column in the code -->
-                <div class="col-xs-12 col-sm-9 main" id="column2">
+                <div class="col-xs-12 main" id="column2">
                     <a href="/landing.html">
                             <img src="/img/notepulllogofoldersopen.png" style="width:200px;"/>
                         </a>
@@ -37,7 +37,7 @@
                         </div>
                         <span id="folder-date" style="color: silver;">updated {{last_updated}}</span>
                         <div class="popover-top" data-toggle="popover" data-placement="top" data-content="Add a new note!" style="font-family:'Roboto'"></div>
-                        <div class="note-box" style="margin-top:10px;"><a href="/newTour/{{id}}" style="color:#fff;" class="foldertitle">+    New Note</a><div class="btn-group sortControl" id="sortNotesControl" style="float:right;">
+                        <div class="note-box " id = "newnote-box" style="margin-top:10px;"><a href="/newTour/{{id}}" style="color:#fff;" class="foldertitle" id="newnoteLink">+    New Note</a><div class="btn-group sortControl" id="sortNotesControl" style="float:right;">
                           <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span id="sortNotesButton">Sort By</span><span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" role="menu">

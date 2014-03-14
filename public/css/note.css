@@ -28,6 +28,7 @@ textarea {
 #done-icon {
   float: right;
   color: #ed1c47;
+  margin-right: 40px;
 }
 /* For help popover */
 .popover-example .popover {
@@ -44,8 +45,7 @@ textarea {
 span.glyphicon {
   font-size: 20px;
   color: #fff;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 /***************************************/
@@ -152,6 +152,7 @@ footer {
   /*padding-bottom: 40px;*/
   text-align: center;
   /*opacity: 0.5;*/
+  right: 0;
 }
 /*
 @media all and (max-height: 500px) {
@@ -264,6 +265,11 @@ div[data-tag="3"] {
 .deleteNote {
   padding:0;
   color: #ed1c47;
+  margin-left: 5px;
+}
+
+.note-item i {
+  margin-top: 17px;
 }
 
 .highlight-toggle {
@@ -365,3 +371,8 @@ div[data-tag="3"] {
   font-size: smaller;
   letter-spacing: 1.2px;
 }
+
+#newnote:hover, #notepage li:hover, #toolbar a:hover {
+  cursor: pointer;
+}
+

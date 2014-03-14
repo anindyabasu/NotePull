@@ -189,10 +189,11 @@ body {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
+/*
 .landing > .nav > li > a:focus,
 .landing > .nav > li > a:hover {
     border-bottom: 2px solid white;
-}
+}*/
 @media (min-width: 992px) {
   .masthead,
   .mastfoot,
@@ -294,7 +295,7 @@ label.error {
   background-color: transparent;
 }
 
-.newfolder {
+.newfolder, .note-box.foldertitle a {
     font-family: Roboto;
     font-weight: 100;
     font-size: 25px;
@@ -378,14 +379,15 @@ label.error {
   background-color: #222;
 }
 
-.note-item {
-  //
+#newnote-box {
+  border-bottom: 3px solid silver;
+  margin-bottom: 15px;
   
 }
 
 .note-box {
-  padding-bottom: 10px;
-    border-bottom: 3px solid silver;
+  padding: 10px 0 20px 0;
+    border-bottom: 1px solid #333;
     width: 93%;
     display: inline-block;
     vertical-align: top;
@@ -437,6 +439,8 @@ label.error {
   padding: 10px;
   border-radius: 0;
   width: 95%;
+  color:#fff;
+  background-color: transparent;
 }
 
 .page_title {
@@ -465,3 +469,10 @@ label.error {
   text-align: center;
   /*opacity: 0.5;*/
 }
+
+.foldertitle:hover, .newfolder1 a:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: .7;
+}
+

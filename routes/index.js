@@ -174,7 +174,10 @@ exports.newNote = function(req, res){
 	var folder_string = req.params.folder;
 	var folder_id = parseInt(folder_string, 10); //check Nan
 
-	res.render('new', {'id': folder_id});
+	var f_title = folderJson['folders'][folder_id].folder_name;
+	if (f_title.length > 14)
+		f_title = f_title.substring(0,13) + "...";
+	res.render('new', {'id': folder_id, 'f_title': f_title});
 	//res.render('chooseFormat', {'id':folder_id});
 };
 
@@ -182,7 +185,10 @@ exports.newNoteTour = function(req, res){
 	var folder_string = req.params.folder;
 	var folder_id = parseInt(folder_string, 10); //check Nan
 
-	res.render('newTour', {'id': folder_id});
+	var f_title = folderJson['folders'][folder_id].folder_name;
+	if (f_title.length > 14)
+		f_title = f_title.substring(0,13) + "...";
+	res.render('newTour', {'id': folder_id, 'f_title': f_title});
 	//res.render('chooseFormat', {'id':folder_id});
 };
 /*
@@ -286,6 +292,10 @@ exports.editNote = function(req, res){
 
 	note.f_id = folder_id;
 	note.n_id = note_id;
+	var f_title = folders[folder_id].folder_name;
+	if (f_title.length > 14)
+		f_title = f_title.substring(0,13) + "...";
+	 note.f_title = f_title;
 	res.render('edit', note);
 };
 
@@ -303,6 +313,10 @@ exports.editNoteTour = function(req, res){
 	//var json = noteJson; // error-format?	
 	note.f_id = folder_id;
 	note.n_id = note_id;
+	var f_title = folders[folder_id].folder_name;
+	if (f_title.length > 14)
+		f_title = f_title.substring(0,13) + "...";
+	 note.f_title = f_title;
 	res.render('edit_tour', note);
 };
 
