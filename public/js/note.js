@@ -80,6 +80,27 @@ $(document).ready(function() {
 	});*/
 	$(".popover-top").popover('show');
 	//$(".popover").popover('show');
+
+	$("#titleTip").tooltip('show');
+ 	$("#title").click(function(){
+ 		$("#titleTip").tooltip('hide');
+ 	});
+ 
+ 	$("#highlightTip").tooltip('show');
+ 	$("#colorsButton").click(function(){
+ 		$("#highlightTip").tooltip('hide');
+ 	});
+ 
+ 	$("#bulletTip").tooltip('show');
+ 	$("#newnote").click(function(){
+ 		$("#bulletTip").tooltip('hide');
+ 	});
+  
+ 	$("#done-icon").tooltip('show');
+ 	$("#submitNote").click(function(){
+ 		$("#done-icon").tooltip('hide');
+ 	});
+
 });
 
 $(document).click(function(e) {
@@ -243,3 +264,5 @@ function compileStuff() {
 	var result = tmplt(data);
 	console.log(result);
 }
+
+
