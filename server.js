@@ -13,7 +13,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
-
+ 
 /* IMPORT ROUTES */
 var index = require('./routes/index');
 var filter = require('./routes/filter');
@@ -21,7 +21,7 @@ var filter = require('./routes/filter');
 // var user = require('./routes/user');
 
 // Create the server instance
-var app = express();
+var app = express(); //
 
 // Print logs to the console and compress pages we send
 app.set('port', process.env.PORT || 3000);
