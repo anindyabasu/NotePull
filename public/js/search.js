@@ -59,13 +59,13 @@ function getResults(e) {
 
 function assignColorHex(color_number_string) {
 	console.log(color_number_string);
-	if (color_number_string == "1")
+	if (color_number_string == "2")
 		color_hex = 'DarkOrange';
-	else if (color_number_string == "2")
+	else if (color_number_string == "1")
 		color_hex = 'Crimson';
-	else if (color_number_string == "3")
-		color_hex = 'Teal';
 	else if (color_number_string == "4")
+		color_hex = 'Teal';
+	else if (color_number_string == "3")
 		color_hex = 'LimeGreen';
 	else 
 		color_hex = '#fff';

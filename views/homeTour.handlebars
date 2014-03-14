@@ -39,18 +39,33 @@
                     </div> 
                 </div>
                         
-                        
-                {{#each homeTour.folders}}
                 <div class="popover-top" data-toggle="popover" data-placement="top" data-content="Click on the first folder, COGS" style="font-family:'Roboto'"></div>
+                {{#each homeTour.folders}}
                 <div class="folder">
                     <div class="folder-content">
-                    <a href="/edit_tour/{{@index}}" class="foldertitle"><span> {{this.folder_name}}</span><br/><span class="folder-date">{{this.last_updated}}</span></a>
+                     <div style="margin-top:12px;margin-bottom:-3px"><a href="/edit_tour/{{@index}}" class="foldertitle">{{this.folder_name}}</a></div><span class="folder-date">{{this.last_updated}}</span>
                     </div>
                     <div class="highlights">
-                        <div class="bar-red"></div>
-                        <div class="bar-yellow"></div>
-                        <div class="bar-green"></div>
-                        <div class="bar-blue"></div>
+                        {{#if this.tag1}}
+                            <div class="bar-red"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
+                        {{#if this.tag2}}
+                            <div class="bar-yellow"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
+                        {{#if this.tag3}}
+                            <div class="bar-green"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
+                        {{#if this.tag4}}
+                            <div class="bar-blue"></div>
+                        {{else}}
+                            <div class="bar-none"></div>
+                        {{/if}}
                     </div>
                 </div>
                 {{/each}}
