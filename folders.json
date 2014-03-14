@@ -1,57 +1,65 @@
 {"folders" : [
-	{"folder_name": "COGS",
+	{"folder_name": "COGS 120",
 	"last_updated" : "Tue Feb 18 2014",
 	"tag1" : true,
 	"tag2" : false,
-	"tag3" : false,
+	"tag3" : true,
 	"tag4" : true,
 	"folder" : [
 		{
 			"date": "Tue Feb 18 2014",
-			"title": "COGS 120 Week 7 NOTE 0/0",
+			"title": "Database Lab",
 			"notes": [
 				{ "tag": "0", "note": "MongoDB"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
-				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class"}
+				{ "tag": "0", "note": "Persistence and queries"},
+				{ "tag": "1", "note": "Schema < Model < Document"},
+				{ "tag": "0", "note": "Asynchronous interaction"}
 			]
 		}, 
 		{
 			"date": "Mon Feb 17 2014",
-			"title": "COGS 120 Week 8 0/1",
+			"title": "Week 7/8",
 			"notes": [
-				{ "tag": "0", "note": "Hallelujah"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
-				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"}
+				{ "tag": "0", "note": "Cannot be certain of hypothesis, must test with user data"},
+				{ "tag": "4", "note": "For quiz: Fit's Law, depends on size and distance of elements"},
+				{ "tag": "0", "note": "Between subjects: subjects tries one, fair distribution, more subjects"},
+				{ "tag": "0", "note": "No randomization - learning effects from showing alternatives in sequence"},
+				{ "tag": "0", "note": "Within subjects: tries all, good if exposure is not a problem"}
+			]
+		},
+		{
+			"date": "Tue Jan 28 2014",
+			"title": "Heuristics",
+			"notes": [
+				{ "tag": "3", "note": "Meet with evaluators on Monday at 3"},
+				{ "tag": "0", "note": "System status"},
+				{ "tag": "0", "note": "Familiar metaphors and language"},
+				{ "tag": "0", "note": "Control and freedom"},
+				{ "tag": "0", "note": "Consistency"},
+				{ "tag": "0", "note": "Error prevention"},
+				{ "tag": "0", "note": "Recognition over recall"},
+				{ "tag": "0", "note": "Flexibility, efficiency"},
+				{ "tag": "0", "note": "Aesthetic and minimalist design"},
+				{ "tag": "0", "note": "Recognize diagnose recover from errors"},
+				{ "tag": "0", "note": "Help"}
 			]
 		}
 		]
 	},
-	{"folder_name": "CSE 170",
-	"last_updated" : "Tue Feb 18 2014",
+	{"folder_name": "LTWL 120",
+	"last_updated" : "Tue Feb 11 2014",
 	"tag1" : false,
-	"tag2" : false,
+	"tag2" : true,
 	"tag3" : false,
-	"tag4" : true,
+	"tag4" : false,
 	"folder" : [
 		{
-			"date": "Tue Feb 18 2014",
-			"title": "COGS 120 Week 7 1/0",
+			"date": "Tue Feb 11 2014",
+			"title": "Week 6",
 			"notes": [
-				{ "tag": "0", "note": "MongoDB"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
-				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class"}
-			]
-		},
-		{
-			"date": "Tue Feb 18 2014",
-			"title": "CSE HAHA 1/1",
-			"notes": [
-				{ "tag": "0", "note": "MongoDB"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class  alalalallalal baoisehfoenlfljoiej iojijoisdj fods well\nnewline yay"},
-				{ "tag": "0", "note": "why whitespace? can be used for grouping, pay attention to details"},
-				{ "tag": "1", "note": "QUIZ on Tuesday! Watch videos before class"}
+				{ "tag": "2", "note": "Paper due 3/17"},
+				{ "tag": "0", "note": "Similarities in Bilbo, Frodo, and Gandalf."},
+				{ "tag": "0", "note": "Change in tone between Hobbit and LOTR"}
 			]
 		}
 		]
